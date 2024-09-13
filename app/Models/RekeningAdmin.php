@@ -36,4 +36,8 @@ class RekeningAdmin extends Model
     public function bank() {
         return $this->belongsTo(Bank::class, 'bank_id');
     }
+
+    public function transaksiTransfer() {
+        return $this->hasMany(TransaksiTransfer::class, 'bank_perantara_id');
+    }
 }
