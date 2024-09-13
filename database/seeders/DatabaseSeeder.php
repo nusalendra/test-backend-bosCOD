@@ -117,8 +117,8 @@ class DatabaseSeeder extends Seeder
 
         $user1 = User::create([
             'id' => (string) Str::uuid(),
-            'username' => 'pengirim',
-            'password' => bcrypt('pengirim'),
+            'username' => 'dennyvioz',
+            'password' => bcrypt('dennyvioz'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
@@ -143,8 +143,8 @@ class DatabaseSeeder extends Seeder
 
         $user2 = User::create([
             'id' => (string) Str::uuid(),
-            'username' => 'penerima',
-            'password' => bcrypt('penerima'),
+            'username' => 'yuanken',
+            'password' => bcrypt('yuanken'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
         ]);
@@ -152,7 +152,7 @@ class DatabaseSeeder extends Seeder
         RekeningPengguna::create([
             'user_id' => $user2->id,
             'bank_id' => $bankBNI->id,
-            'atas_nama' => 'Putri Susiowati',
+            'atas_nama' => 'Yuan Ken',
             'nomor_rekening' => mt_rand(1000000000, 9999999999),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now(),
