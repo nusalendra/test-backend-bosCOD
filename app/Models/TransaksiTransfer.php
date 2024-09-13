@@ -46,8 +46,8 @@ class TransaksiTransfer extends Model
         return $this->belongsTo(RekeningPengguna::class, 'penerima_id');
     }
 
-    public function bank() {
-        return $this->belongsTo(Bank::class, 'bank_id');
+    public function rekeningAdmin() {
+        return $this->belongsTo(Bank::class, 'bank_perantara_id');
     }
 
     public function logTransfer()

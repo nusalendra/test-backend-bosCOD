@@ -40,8 +40,4 @@ class Bank extends Model
     public function rekeningPengguna() {
         return $this->hasMany(RekeningPengguna::class, 'bank_id');
     }
-
-    public function transaksiTransfer() {
-        return $this->hasMany(TransaksiTransfer::class, 'bank_id');
-    }
 }
